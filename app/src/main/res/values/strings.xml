@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">ADBanner</string>
+    <string name="app_name">FlyingBanner</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="release">Release</string>
+    <string name="play">play</string>
+    <string name="tip">图片视频混播FlyingBanner(1.1.1)</string>
 </resources>

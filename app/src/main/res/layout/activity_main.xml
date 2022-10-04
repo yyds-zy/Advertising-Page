@@ -6,16 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <com.youth.banner.Banner
-        android:id="@+id/banner"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        app:banner_indicator_selected_color="#95F2EC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
+    <TextView
+        android:id="@+id/tip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tip"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.free.banner.view.BannerViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/tip1" />
+
+    <com.free.banner.view.BannerViewPager
+        android:id="@+id/viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/viewpager" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:text="@string/add"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewpager2" />
+
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:text="@string/remove"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/add"
+        app:layout_constraintTop_toBottomOf="@id/viewpager2" />
+
+    <Button
+        android:id="@+id/release"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:text="@string/release"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/remove"
+        app:layout_constraintTop_toBottomOf="@id/viewpager2" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="12dp"
+        android:text="@string/play"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
