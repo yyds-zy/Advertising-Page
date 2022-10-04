@@ -15,6 +15,7 @@ import com.free.banner.hbanner.SubView;
 import com.free.banner.hbanner.VideoSubView;
 import com.free.banner.hbanner.VideoViewType;
 import com.free.banner.transformer.DefaultTransformer;
+import com.free.banner.transformer.VerticalPageTransformer;
 import com.free.banner.view.BannerViewPager;
 
 import java.util.ArrayList;
@@ -58,7 +59,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     @Override
     public void onGlobalLayout() {
         rootView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-        verifyStoragePermissions(MainActivity.this);
+        verifyStoragePermissions(this);
     }
 
     @Override
@@ -104,10 +105,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 .build());
         hBanner.sources(data);
         //设置viewpager切换方式
-        viewPager.setPageTransformer(true, new DefaultTransformer());
-
-//        init2();
-//        syncTest();
+        viewPager.setPageTransformer(true, new VerticalPageTransformer());
 
         //开始显示或者自动播放
         hBanner.play(true);
@@ -124,7 +122,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
                 .url("https://image.playgame.wiki/2020/04/01/7ff9c9c64c/8a37fa61dc208e51c558c087173b80a8.jpg")
                 .build());
         data2.add(new ImageSubView.Builder(getBaseContext())
-                .resId(R.mipmap.b2)
+                .resId(R.mipmap.b1)
                 .build());
         data2.add(new ImageSubView.Builder(getBaseContext())
                 .resId(R.mipmap.b3)
